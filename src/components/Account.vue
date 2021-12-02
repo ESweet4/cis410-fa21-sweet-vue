@@ -19,7 +19,7 @@
         <tr v-for="thisOrder in ordersByUser" :key="thisOrder.OrderPK">
           <th>{{ thisOrder.OrderPK }}</th>
           <th>
-            <router-link :to="`/orders/${thisOrder.ItemFK}`">{{
+            <router-link :to="`/items/${thisOrder.ItemFK}`">{{
               thisOrder.ItemName
             }}</router-link>
           </th>

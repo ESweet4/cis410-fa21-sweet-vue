@@ -19,9 +19,9 @@ const router = createRouter({
     { path: "/items", component: Items },
     { path: "/orders", component: Orders },
     {
-      path: "/orders/:pk",
+      path: "/items/:pk",
       component: OrderDetail,
-      children: [{ path: "order", component: OrderCreate }],
+      children: [{ path: "createOrder", component: OrderCreate }],
     },
     { path: "/signup", component: Signup },
     { path: "/:invalidroute(.*)", component: NotFound },
