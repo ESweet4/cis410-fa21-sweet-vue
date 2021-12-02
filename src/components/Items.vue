@@ -12,12 +12,16 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr v-for="anItem in theItems" :key="anItem.ItemFK">
+        <tr v-for="anItem in theItems" :key="anItem.ItemPK">
           <th>{{ anItem.ItemName }}</th>
           <th>{{ anItem.Summary }}</th>
           <th>{{ anItem.Cost }}</th>
-          <th><router-link to:="`/orders/${anItem.ItemFK}`">Details</th>
-        </tr> -->
+          <th>
+            <router-link :to="`/items/${anItem.ItemPK}`"
+              ><button class="btn btn-primary">Details</button></router-link
+            >
+          </th>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -27,7 +31,7 @@
 export default {
   computed: {
     theItems() {
-      return this.store.state.items;
+      return this.$store.state.items;
     },
   },
 };

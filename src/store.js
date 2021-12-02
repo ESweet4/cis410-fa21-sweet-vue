@@ -17,7 +17,7 @@ export default createStore({
       state.items = items;
     },
   },
-  acions: {
+  actions: {
     getItems({ commit }) {
       axios.get("/items").then((aResponse) => {
         console.log("response in /items", aResponse);
