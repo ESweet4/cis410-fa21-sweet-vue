@@ -8,6 +8,7 @@ import NotFound from "./components/NotFound.vue";
 import OrderCreate from "./components/OrderCreate.vue";
 import Signup from "./components/Signup.vue";
 import Account from "./components/Account.vue";
+import Items from "./components/Items.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,6 +16,7 @@ const router = createRouter({
     { path: "/", component: Home },
     { path: "/account", component: Account },
     { path: "/login", component: Login },
+    { path: "/items", component: Items },
     { path: "/orders", component: Orders },
     {
       path: "/orders/:pk",

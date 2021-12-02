@@ -16,11 +16,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <router-link
-              class="nav-link active"
-              aria-current="page"
-              to="/orders"
-              >Orders</router-link
+            <router-link class="nav-link active" aria-current="page" to="/items"
+              >Items</router-link
             >
           </li>
           <li class="nav-item">
