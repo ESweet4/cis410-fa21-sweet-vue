@@ -30,6 +30,8 @@
         Sign in to Create an Order
       </button></router-link
     >
+    <br /><br /><br />
+    <router-view />
   </div>
 </template>
 
