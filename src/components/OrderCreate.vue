@@ -20,11 +20,7 @@
               </div>
 
               <button type="submit" class="btn btn-primary">Submit Order</button
-              ><button
-                v-on:click="cancelOrder"
-                type="clear"
-                class="btn btn-outline-danger"
-              >
+              ><button v-on:click="cancelOrder" class="btn btn-outline-danger">
                 Cancel
               </button>
 
@@ -50,6 +46,9 @@ export default {
     };
   },
   methods: {
+    cancelOrder() {
+      this.$router.go(-1);
+    },
     submitOrder() {
       let myOrder = {
         quantity: this.quantity,
@@ -61,15 +60,13 @@ export default {
           headers: { Authorization: `Bearer ${this.$store.state.token}` },
         })
         .then(() => {
+          console.log("Going to Account");
           this.$router.replace("/account");
         })
         .catch(() => {
           this.errorMessage =
             "Unable to create an order, please try again later";
         });
-    },
-    cancelOrder() {
-      this.$router.go(-1);
     },
   },
 };

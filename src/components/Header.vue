@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <router-link class="navbar-brand" to="/">Sweet Vue</router-link>
+      <router-link class="navbar-brand" to="/">The Green Registry</router-link>
       <button
         class="navbar-toggler"
         type="button"
